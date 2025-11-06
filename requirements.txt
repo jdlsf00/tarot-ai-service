@@ -1,15 +1,19 @@
+# Core FastAPI dependencies
 fastapi>=0.115.0
 uvicorn[standard]>=0.24.0
 pydantic>=2.5.0
 python-multipart>=0.0.0
 aiofiles>=23.2.0
 httpx>=0.27.0
+
+# Data processing
 numpy>=1.24.0
 pandas>=2.0.0
-Pillow>=10.1.0
 python-dateutil>=2.8.0
 PyYAML>=6.0.0
 requests>=2.31.0
+
+# Python 3.10+ compatibility
 asyncio>=3.4.0
 typing-extensions>=4.8.0
 
@@ -18,13 +22,20 @@ pytz>=2023.3.0
 astral>=3.2.0
 lunardate>=0.2.0
 
-# AI and LangChain dependencies
-langchain>=0.3.0
-huggingface-hub>=0.16.0
-transformers>=4.35.0
-sentence-transformers>=3.0.0
-elasticsearch>=8.13.0
-redis>=5.0.0
-celery>=5.3.0
-chromadb>=1.0.0
-openai>=1.3.0
+# Image processing (for card images)
+Pillow>=10.1.0
+
+# AI dependencies (defer until needed)
+# Uncomment when implementing AI interpretation:
+# langchain-core>=0.3.0
+# openai>=1.3.0
+# chromadb>=1.0.0  # For ebook wisdom integration
+# sentence-transformers>=3.0.0
+
+# REMOVED unused dependencies (reduces Docker image by ~2GB):
+# huggingface-hub>=0.16.0
+# transformers>=4.35.0
+# elasticsearch>=8.13.0
+# redis>=5.0.0
+# celery>=5.3.0
+# langchain>=0.3.0 (use langchain-core instead when needed)
